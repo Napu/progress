@@ -326,7 +326,7 @@ class block_progress_edit_form extends block_edit_form {
                             $attributes = array('class' => 'progressConfigModuleTitle');
                             $moduletitle = HTML_WRITER::tag('div', $icon.$text, $attributes);
                             $mform->addElement('html', $moduletitle);
-
+                            
                             // Allow monitoring turned on or off.
                             $mform->addElement('selectyesno', 'config_monitor_'.$moduleinfo->uniqueid,
                                                get_string('config_header_monitored', 'block_progress'));

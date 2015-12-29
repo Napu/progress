@@ -201,7 +201,7 @@ $string['overview'] = 'Overview of students';
 $string['progress'] = 'Progress';
 $string['progressbar'] = 'Progress Bar';
 
-// For cabailities.
+// For capabilities.
 $string['progress:overview'] = 'View course overview of Progress bars for all students';
 $string['progress:addinstance'] = 'Add a new Progress Bar block';
 $string['progress:myaddinstance'] = 'Add a Progress Bar block to My home page';
@@ -213,7 +213,7 @@ $string['cachedef_cachedlogs'] = 'Progress Bar log query caching';
 $string['no_blocks'] = "No Progress Bar blocks are set up for your courses.";
 
 // Date
-$string['adddate'] = 'Add dates';
-$string['testform'] = 'Evaluation date upload';
-$string['onlycsv'] = 'Only CSV format';
-$string['uploadsucces'] = 'Succesfull upload';
+$string['adddate'] = 'Subir fechas';
+$string['testform'] = 'Subir fecha de evaluaciones';
+$string['onlycsv'] = 'Solo archivos CSV';
+$string['uploadsucces'] = 'Carga exitosa';

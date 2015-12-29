@@ -1430,3 +1430,27 @@ function block_progress_get_coursemodule($module, $recordid, $courseid, $userid 
         return get_coursemodule_from_instance($module, $recordid, $courseid);
     }
 }
+//TODO Terminar la funcion
+/**
+ * 
+ * Gets the user inmediatly next test date and returns it.
+
+ * @return string Next test date
+ */
+function block_progress_get_dates($courseid){
+	global $DB, $USER;
+	$sql = "
+	SELECT * 
+	FROM {block_progress}
+	WHERE userid = :id AND test_time > :date AND courseid = :courseid
+	ORDER BY test_time ASC
+	LIMIT 1
+	";
+	$userdate = $DB -> get_record_sql($sql, array('id' =>$USER->id, 'date' => time(), 'courseid'=>$courseid));
+	if(isset($userdate->test_name)){
+	return $userdate->test_name."<br>".date("d-m-Y",$userdate->test_time)."<br>".$userdate->modulo." ". $userdate->room;
+	}else{
+		return " No hay pruebas para mostrar";
+}
+
+}
