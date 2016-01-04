@@ -1,5 +1,4 @@
 <?php
-//die("llegamos");
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -32,8 +31,7 @@ require_once(dirname(__FILE__) . '/../../config.php');
 require_once($CFG->dirroot.'/blocks/progress/lib.php');
 require_once($CFG->libdir.'/tablelib.php');
 require_once("$CFG->libdir/formslib.php");
-
-
+require_once($CFG->dirroot.'/blocks/progress/upload_form.php');
 
 // Gather form data.
 $progressbarid = required_param('progressbarid', PARAM_INT);
@@ -75,32 +73,6 @@ $url = new moodle_url('/course/view.php', array('id'=>$courseid));
 // Start page output.
 echo $OUTPUT->header();
 
-// File upload form
-class progress_csvform extends moodleform {
-	//Add elements to form
-	public function definition() {
-		global $CFG;
-
-		$mform = $this->_form; 
-		$instance = $this->_customdata;
-		
-		// Adding filepicker
-		$mform->addElement('filepicker', 'csvdates', get_string('onlycsv', 'block_progress'), null, $instance['options']);
-		// Adding hidden id for page required param
-		$mform->addElement('hidden', 'progressbarid', $instance['progressbarid']);
-		$mform->setType('progressbarid', PARAM_RAW);
-		// Adding hidden id for page required param
-		$mform->addElement('hidden', 'courseid', $instance['courseid']);
-		$mform->setType('courseid', PARAM_RAW);
-		// Adding submit buttons
-		$this -> add_action_buttons(true);
-	}
-	function validation($data, $files) {
-		return array();
-	}
-	
-}
-
 // Options for uploading the csv file within the form
 $options = array('maxbytes'=>get_max_upload_file_size($CFG->maxbytes, $course->maxbytes, $course->maxbytes), 'accepted_types'=>'.csv');
 
@@ -131,13 +103,14 @@ if ($mform->is_cancelled()) {
 		
 		//Separation
 		$dbinput= explode(";", $datas[$i]);
+		
 		// Looking for user id from id number
 		$sql = "
 		SELECT id
 		FROM {user}
 		WHERE idnumber = :id";
 		$userid = $DB->get_record_sql($sql, array('id'=>(int)$dbinput[0]));
-		
+
 		// date transformation to unix timestamp
 		$date = explode("-", $dbinput[1]);
 		$date = $date[2]."-".$date[1]."-".$date[0];
