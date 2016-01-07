@@ -27,156 +27,156 @@
 $string['aspirelist'] = 'Aspire resource list';
 $string['assign'] = 'Assignment';
 $string['assignment'] = 'Assignment';
-$string['book'] = 'Book';
+$string['book'] = 'Libro';
 $string['bigbluebuttonbn'] = 'Big Blue Button';
-$string['certificate'] = 'Certificate';
+$string['certificate'] = 'Certificado';
 $string['chat'] = 'Chat';
 $string['choice'] = 'Choice';
-$string['data'] = 'Database';
+$string['data'] = 'Base de datos';
 $string['equella'] = 'Equella';
 $string['feedback'] = 'Feedback';
 $string['flashcardtrainer'] = 'Flashcard trainer';
-$string['folder'] = 'Folder';
-$string['forum'] = 'Forum';
-$string['glossary'] = 'Glossary';
+$string['folder'] = 'Carpeta';
+$string['forum'] = 'Foro';
+$string['glossary'] = 'Diccionario';
 $string['hotpot'] = 'Hot Potatoes';
-$string['hsuforum'] = 'Advanced Forum';
+$string['hsuforum'] = 'Foro Avanzado';
 $string['imscp'] = 'IMS Content Package';
-$string['journal'] = 'Journal';
-$string['lesson'] = 'Lesson';
-$string['lti'] = 'External tool';
+$string['journal'] = 'Diario';
+$string['lesson'] = 'Lección';
+$string['lti'] = 'Herramienta externa';
 $string['ouwiki'] = 'OU Wiki';
-$string['page'] = 'Page';
+$string['page'] = 'Página';
 $string['panopto'] = 'Panopto video';
-$string['questionnaire'] = 'Questionnaire';
+$string['questionnaire'] = 'Questionario';
 $string['quiz'] = 'Quiz';
-$string['resource'] = 'File';
+$string['resource'] = 'Archivo';
 $string['recordingsbn'] = 'BBB Recordings';
 $string['scorm'] = 'SCORM';
-$string['turnitintool'] = 'Turnitin Tool';
-$string['turnitintooltwo'] = 'Turnitin Tool 2';
+$string['turnitintool'] = 'Herramienta Turnitin';
+$string['turnitintooltwo'] = 'Herramienta Turnitin 2';
 $string['url'] = 'URL';
 $string['video'] = 'Video';
-$string['vpl'] = 'Virtual Programming Lab';
+$string['vpl'] = 'Laboratorio Virtual de Programación';
 $string['wiki'] = 'Wiki';
-$string['workshop'] = 'Workshop';
+$string['workshop'] = 'Taller';
 
 // Actions.
-$string['activity_completion'] = 'activity completion';
-$string['answered'] = 'answered';
+$string['activity_completion'] = 'completición de actividad';
+$string['answered'] = 'respondido';
 $string['assessed'] = 'assessed';
-$string['attempted'] = 'attempted';
+$string['attempted'] = 'intentado';
 $string['awarded'] = 'awarded';
-$string['completed'] = 'completed';
-$string['finished'] = 'finished';
-$string['graded'] = 'graded';
-$string['marked'] = 'marked';
-$string['passed'] = 'passed';
-$string['passedby'] = 'passed by deadline';
-$string['passedscorm'] = 'passed';
+$string['completed'] = 'completado';
+$string['finished'] = 'terminado';
+$string['graded'] = 'con nota';
+$string['marked'] = 'corregido';
+$string['passed'] = 'pasado';
+$string['passedby'] = 'pasado de la fecha limite';
+$string['passedscorm'] = 'pasado';
 $string['posted_to'] = 'posted to';
-$string['responded_to'] = 'responded to';
-$string['submitted'] = 'submitted';
-$string['viewed'] = 'viewed';
+$string['responded_to'] = 'respondido a';
+$string['submitted'] = 'entregado';
+$string['viewed'] = 'visto';
 
 // Stings for the Config page.
-$string['config_default_title'] = 'Progress Bar';
-$string['config_group'] = 'Visible only to group';
-$string['config_header_action'] = 'Action';
-$string['config_header_expected'] = 'Expected by';
-$string['config_header_icon'] = 'Icon';
-$string['config_header_locked'] = 'Locked to deadline';
-$string['config_header_monitored'] = 'Monitored';
-$string['config_icons'] = 'Use icons in bar';
-$string['config_now'] = 'Use';
-$string['config_percentage'] = 'Show percentage to students';
-$string['config_title'] = 'Alternate title';
-$string['config_orderby'] = 'Order bar items by';
-$string['config_orderby_due_time'] = '"Expected by" date-time';
-$string['config_orderby_course_order'] = 'Ordering in course';
-$string['config_warning_logstores'] = 'Warning: Logging is disabled so actions relying on views will not be checked.';
-$string['config_warning_loglifetime'] = 'Warning: Logs are cleared after {$a} day(s). Actions relying on views will be affected by this.';
+$string['config_default_title'] = 'Barra de Progreso';
+$string['config_group'] = 'Visible solo al grupo';
+$string['config_header_action'] = 'Acción';
+$string['config_header_expected'] = 'Esperado para';
+$string['config_header_icon'] = 'Icono';
+$string['config_header_locked'] = 'Bloqueado a fecha límite';
+$string['config_header_monitored'] = 'Monitoreado';
+$string['config_icons'] = 'Usar iconos en la barra';
+$string['config_now'] = 'Use AHORA';
+$string['config_percentage'] = 'Mostrar porcentaje a estudiantes';
+$string['config_title'] = 'Título alternativo';
+$string['config_orderby'] = 'Ordenar los items de la barra por';
+$string['config_orderby_due_time'] = 'Esperado por fecha límite';
+$string['config_orderby_course_order'] = 'Orden en el curso';
+$string['config_warning_logstores'] = 'Warning: No estás logeado asique las acciones dependientes de las vistas no serán revisadas.';
+$string['config_warning_loglifetime'] = 'Warning: Los logs son borrados despues de {$a} dia(s). Acciones dependientes de las vistas se verán afectadas por esto.';
 
 // Help strings.
-$string['why_set_the_title'] = 'Why you might want to set the block instance title?';
+$string['why_set_the_title'] = '¿Por qué querrías ponerle título al bloque?';
 $string['why_set_the_title_help'] = '
-<p>There can be multiple instances of the Progress Bar block. You may use different Progress Bar blocks to monitor different sets of activities or resources. For instance you could track progress in assignments in one block and quizzes in another. For this reason you can override the default title and set a more appropriate block title for each instance.</p>
+<p>Podría haber muchas instancias de este bloque. Puedes usar diferentes Barras de Progreso para monitoreas diferentes grupos de actividades o recursos. Por ejemplo, podrías monitorear las tares y Quizzes por separado. Es por esto que puedes sobreescribir el título por defecto y elegir un título mas apropiado para cada bloque.</p>
 ';
-$string['why_use_icons'] = 'Why you might want to use icons?';
+$string['why_use_icons'] = '¿Por qué querrías usar iconos?';
 $string['why_use_icons_help'] = '
-<p>You may wish to add tick and cross icons in the Progress Bar to make this block more visually accessible for students with colour-blindness.</p>
-<p>It may also make the meaning of the block clearer if you believe colours are not intuitive, either for cultural or personal reasons.</p>
+<p> Podrías querer agregar iconos de tickets y cruces para hacer la Barra de Progresso más accesible para alumnos con problemas de daltonismo.</p>
+<p> Podría también hacer el bloque más claro, si es que crees que los colores no son lo suficientemente intuitivos, tanto por la cultura o por razones personales.</p>
 ';
-$string['why_display_now'] = 'Why you might want to hide/show the NOW indicator?';
+$string['why_display_now'] = '¿Por qué querrías esconde/mostrar el indicador AHORA?';
 $string['why_display_now_help'] = '
-<p>Not all course are focussed on completion of tasks by specific times. Some courses may have an open-enrolment, allowing students to enrol and complete when they can.</p>
-<p>To use the Progress Bar as a tool in such courses, create "Expected by" dates in the far-future and set the "Use NOW" setting to No.</p>
+<p>No todos los cursos se centran en la completicion de taeras en una fecha específica. Algunos cursos pueden tener una inscripción abierta, permitiendole a los alumnos inscribirse y completar cuando puedan.</p>
+<p>Para usar la Barra de Progreso como herramiento en ese tipo de cursos, crear "Esperado por fecha límite" en el futuro lejano y configura el "Use AHORA" en No.</p>
 ';
-$string['what_does_monitored_mean'] = 'What monitored means?';
+$string['what_does_monitored_mean'] = '¿Qué significa monitoreado?';
 $string['what_does_monitored_mean_help'] = '
-<p>The purpose of this block is to encourage students to manage their time effectively. Each student can monitor their progress in completing the activities and resources you have created.</p>
-<p>On the configuration page you will see a list of all the modules that you have created which can be monitored by the Progress Bar block. Modules will only be monitored and appear as a small square in the progress bar if you select Yes to monitor the module.</p>
+<p>La idea de este bloque es motivar a los estudiantes a usar su tiempo con eficiencia. Cada estudiante puede monitorear su progreso e las actividades y/o recursos que tú creaste.</p>
+<p>En la página de configuración vas a ver una lista de todos los módulos que has creadoque pueden ser monitoreados por el bloque Barra de Progreso. Los módulos solo seran monitoreados y apareceran en pequeños cuadrados en la barra de progreso si elijes Si en monitorear el módulo.</p>
 ';
-$string['what_locked_means'] = 'What locked to deadline means?';
+$string['what_locked_means'] = '¿Qué significa bloqueado a fecha límite?';
 $string['what_locked_means_help'] = '
-<p>Where an activity can, in its own settings, have a deadline, and a deadline is set, it is optional to use the deadline of the activity, or to set another separate time used for the activity in the Progress Bar.</p>
-<p>To lock the Progress Bar to an activity\'s deadline it must have a deadline enabled and set. If the deadline is locked, changing the deadline in the activity\'s settings will automatically change the time associated with the activity in the Progress Bar.</p>
-<p>When an activity is not locked to a deadline of the activity, changing the date and time in the Progress Bar settings will not affect the deadline of the activity.</p>
+<p>Cuando una actividad, en su propia configuración, tiene fecha límite, es opcional usar la fecha límite de la actividad, o configurar otra para usar en sobre esa actividad en el bloque Barra de Progreso.</p>
+<p>Para bloquear la Barra de Progreso a la fecha límite de una(s) actividad(es) en la Barra de progreso, esta tiene que que estar habilitada y configurada. Si la fecha límite esta bloqueada, cambiarla en la(s) actividad(es)se cambiara automáticamente en la Barra de Progresso.</p>
+<p>Cuando una actividad no esta bloqueada a fecha límite, cambiar la fecha en la Barra de Progreso no afectará la fecha límite de  la actividad.</p>
 ';
-$string['what_expected_by_means'] = 'What expected by means?';
+$string['what_expected_by_means'] = '¿Qué significa esperado para?';
 $string['what_expected_by_means_help'] = '
-<p>The <em>Expected by</em> date-time is when the related activity/resource is expected to be completed (viewed, submitted, posted-to, etc...).</p>
-<p>If there is already a deadline associated with an activity, like an assignment deadline, this deadline can be used as the expected time for the event as long as the "Locked to Deadline" checkbox is checked. By deselecting locking an independent expected time can be created, and altering this will not affect the actual deadline of the activity.</p>
-<p>When you first visit the configuration page for the Progress Bar, or if you create a new activity/resource and return to the configuration page, a guess will be made about the expected date-time for the activity/resource.
+<p><em>Eesperado para</em> es cuando se espera quela actividad/recurso relacionada sea completada (vista, entregada, etc...).</p>
+<p>Si ya hay una fecha límite asociada a la actividad, como la fecha de una tarea, esta puede ser usada como esperada para el evento mientras "bloqueado para fecha límite" esté seleccionado. Cuando se deselecciona, una nueva fecha límite puede ser configurada, y alterar esto no tiene efecto sobre la fecha límite propia de la actividad.</p>
+<p>Cuando visitas la página de configuración por primera vez, o si creas una nueva actividad/recurso y regresas a la configuración, una se hará una aproximación sobre la fecha límite esperada para la actividad/recurso.
 <ul>
-    <li>For an activity with an existing deadline, this deadline will used.</li>
-    <li>When there is no activity deadline, but the course format used is a weekly format, the end of the week (just before midnight Sunday) is assumed.</li>
-    <li>For an activity/resource not used in a weekly course format, the end of the current week (just before midnight next Sunday) is used.</li>
+    <li>Para una actividad con fecha límite existente, se usará esa fecha.</li>
+    <li>Cuado no hay fecha límite, pero el formto del curso es semanal, se asume el final de la semana(just0 antes de la media noche del domingo).</li>
+    <li>Para una actividad/recurso no usada en formato semanal, se usará la presente semana(justo antes de la media noche del siguiente domingo) .</li>
 </ul>
 </p>
-<p>Once an expected date-time is set, it is independent of any deadline or other information for that activity/resource.</p>
+<p>Una vez que una fecha límite esperada es configurada, es independiente de cualquer fecha límite o información de la actividad/recurso.</p>
 ';
-$string['what_actions_can_be_monitored'] = 'What actions can be monitored?';
+$string['what_actions_can_be_monitored'] = '¿Qué acciones pueden ser monitoreadas?';
 $string['what_actions_can_be_monitored_help'] = '
-<p>Different activities and resources can be monitored.</p>
-<p>Because different activities and resources are used differently, what is monitored for each module varies. For example, for assignments, submission can be monitored; quizzes can be monitored on attempt; forums can be monitored for student postings; choice activities can monitored for answering and viewing resources is monitored.</p>
+<p>Diferentes actividades y recursos pueden ser monitoreados.</p>
+<p>Como las diferentes actividades y recursos tienen usos diferentes, lo que se monitorea para cada módulo cambia. Por ejemplo, para tareas, se pueden monitorear las entrefas; en losquizzes se pueden monitorear los intentos; los foros pueden monitorearse dependiendo si el alumno escribió; ver algún recurso es monitoreado.</p>
 <h3>Passing</h3>
-<p>For the assignment, lesson and quiz modules, the notion of passing relies on a "Grade to pass" being set for the grade item in the Gradebook. <a href="http://docs.moodle.org/en/Grade_items#Activity-based_grade_items" target="_blank">More help...</a></p>
+<p>Para los módulos; tarea, quiz y lección, la opción de pasar esta relacionada con "Nota para pasar" siendo configurada para el eleento de calificación en el Libro de Calificaciones. <a href="http://docs.moodle.org/en/Grade_items#Activity-based_grade_items" target="_blank">More help...</a></p>
 ';
-$string['why_show_precentage'] = 'Why show a progress percentage to students?';
+$string['why_show_precentage'] = '¿Por qué mostrarle el porcentaje de progreso a los alumnos?';
 $string['why_show_precentage_help'] = '
-<p>It is possible to show an overall percentage of progress to students.</p>
-<p>This is calculated as the number of items complete divided by the total number of items in the bar.</p>
-<p>The progress percentage appears until the student mouses over an item in the bar.</p>
+<p>Es posible mostrarles el porcentaje de avance sobre el total de actividades/recursos a los alumnos.</p>
+<p>Se calcula como la cantidad de elementos completados dividido en la cantidad de elementos totales en la barra.</p>
+<p>El porcentje de progreso aparece cuando pasa el mouse sobre un elemento de la barra.</p>
 ';
-$string['how_ordering_works'] = 'How ordering works';
+$string['how_ordering_works'] = 'Como funciona el ordenador';
 $string['how_ordering_works_help'] = '
-<p>There are two ways items in the Progress Bar can be ordered.</p>
+<p> Hay dos maneras en que los elementos de la Barra de Progreso pueden ser ordenados.</p>
 <ul>
-    <li><em>"Expected by" date-time</em> (default)<br />
-    The due dates or manually set dates of activities/resources are used to order items shown in the Progress Bar.
+    <li><em>Esperado para fecha límite</em> (default)<br />
+    Las fechas límites o configurar fechas de actividades/recursos manualmente, son usadas como orden en la Barra de Progreso.
     </li>
-    <li><em>Ordering in course</em><br />
-    Activities/resources are presented in the same order as they are on the course page. When this option is used, time-related aspects are disabled.
+    <li><em>Orden en el curso</em><br />
+    Las actividades/recursos se muestran en el mismo orden en que aparecen en la página del curso. Cuando se usa est opción, los aspectos relacionados con el tiempo se dehabilitan.
     </li>
 </ul>
 ';
-$string['how_group_works'] = 'How visible group works';
+$string['how_group_works'] = 'Como funcionan los grupos visible';
 $string['how_group_works_help'] = '
-<p>Selecting a group will limit the display of the this block to that group only.</p>
+<p>Seleccionar un grupo limitará lo que se vea en el bloque a ese grupo en específico.</p>
 ';
 
 
 // Other terms.
-$string['addallcurrentitems'] = 'Add all activities/resources';
-$string['mouse_over_prompt'] = 'Mouse over block for info.';
-$string['no_events_config_message'] = 'There are no activities or resources to monitor the progress of. Create some activities and/or resources then configure this block.';
-$string['no_events_message'] = 'No activities or resources are being monitored. Use config to set up monitoring.';
-$string['no_visible_events_message'] = 'None of the monitored events are currently visible.';
-$string['now_indicator'] = 'NOW';
-$string['pluginname'] = 'Progress Bar';
-$string['selectitemstobeadded'] = 'Select activities/resources';
-$string['time_expected'] = 'Expected';
+$string['addallcurrentitems'] = 'Agregar todas las actividades/recursos';
+$string['mouse_over_prompt'] = 'Mouse sobre el bloque para información.';
+$string['no_events_config_message'] = 'No hay actividades o recursos para monitorer el progreso. Crea algunas actividades y/o recursos luego configura el bloque.';
+$string['no_events_message'] = 'No hay actividades o recursos siendo monitoreados. Use configuración para setiar el monitoreo.';
+$string['no_visible_events_message'] = 'Ninguno de los eventos monitoreados estanán visibles.';
+$string['now_indicator'] = 'AHORA';
+$string['pluginname'] = 'Barra de Progreso';
+$string['selectitemstobeadded'] = ' Seleccione actividades/recursos';
+$string['time_expected'] = 'Esperado';
 
 // Global setting strings
 // Default colours that may have different cultural meanings.
@@ -184,36 +184,37 @@ $string['time_expected'] = 'Expected';
 $string['attempted_colour'] = '#73A839';
 $string['notAttempted_colour'] = '#C71C22';
 $string['futureNotAttempted_colour'] = '#025187';
-$string['attempted_colour_title'] = 'Attempted Colour';
-$string['attempted_colour_descr'] = 'HTML Colour code for elements that have been attempted';
-$string['notattempted_colour_title'] = 'Not-attempted Colour';
-$string['notattempted_colour_descr'] = 'HTML Colour code for current elements that have not yet been attempted';
-$string['futurenotattempted_colour_title'] = 'Future Not-attempted Colour';
-$string['futurenotattempted_colour_descr'] = 'HTML Colour code for future elements that have not yet been attemted';
-$string['coursenametoshow'] = 'Course name to show on Dashboard';
-$string['shortname'] = 'Short course name';
-$string['fullname'] = 'Full course name';
-$string['showinactive'] = 'Show inactive students in Overview';
+$string['attempted_colour_title'] = 'Color con intento';
+$string['attempted_colour_descr'] = 'Código de color HTML para elementos que donde se ha hecho un intento';
+$string['notattempted_colour_title'] = 'Color sin intento';
+$string['notattempted_colour_descr'] = 'Código de color HTML para elementos en donde no se ha hecho un intentod';
+$string['futurenotattempted_colour_title'] = 'Color eventos futuros';
+$string['futurenotattempted_colour_descr'] = 'Código de color HTML para elementos futuros que todavia no tienen intentos';
+$string['coursenametoshow'] = 'Nombre del curso para mostrar en Dashboard';
+$string['shortname'] = 'Nombre corto del curso';
+$string['fullname'] = 'Nombre completo del curso';
+$string['showinactive'] = 'Mostrar a los alumnos inactivos en vista general';
 
 // Overview page strings.
-$string['lastonline'] = 'Last in course';
-$string['overview'] = 'Overview of students';
-$string['progress'] = 'Progress';
-$string['progressbar'] = 'Progress Bar';
+$string['lastonline'] = 'Último en el curso';
+$string['overview'] = 'Vista general de estudiantes';
+$string['progress'] = 'Progreso';
+$string['progressbar'] = 'Barra de Progreso';
 
 // For capabilities.
-$string['progress:overview'] = 'View course overview of Progress bars for all students';
-$string['progress:addinstance'] = 'Add a new Progress Bar block';
-$string['progress:myaddinstance'] = 'Add a Progress Bar block to My home page';
+$string['progress:overview'] = 'Vista de la vision general del progreso de todos los alumnos';
+$string['progress:addinstance'] = 'Agregar un nuevo bloque de Barra de ProgresoAdd a new Progress Bar block';
+$string['progress:myaddinstance'] = 'Agregar un bloque de Barra de Progreso en mi página principal';
 
 // For Cache.
-$string['cachedef_cachedlogs'] = 'Progress Bar log query caching';
+$string['cachedef_cachedlogs'] = 'Consulta de registro de alacenamiento de la Barra de Progreso en caché';
 
 // For My home page.
-$string['no_blocks'] = "No Progress Bar blocks are set up for your courses.";
+$string['no_blocks'] = "No hay Barra de Progreso configurada para tus cursos.";
 
 // Date
 $string['adddate'] = 'Subir fechas';
 $string['testform'] = 'Subir fecha de evaluaciones';
 $string['onlycsv'] = 'Solo archivos CSV';
 $string['uploadsucces'] = 'Carga exitosa';
+$string['back'] = 'Atrás';

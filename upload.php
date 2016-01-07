@@ -98,19 +98,28 @@ if ($mform->is_cancelled()) {
 	
 	//data counter
 	$counter=0;
+	
+	//If records for this course exists delete
+	$sql_delete_records = " 
+	SELECT *
+	FROM {block_progress}
+	Where courseid = :courseid";
+	if($DB->record_exists_sql($sql_delete_records, array('courseid'=>$courseid) )){
+		$DB->delete_records('block_progress', array('courseid'=>$courseid));
+	}
+	
 	//Data input on data base
 	for($i=1; $i<=$max; $i++){
-		
 		//Separation
 		$dbinput= explode(";", $datas[$i]);
-		
+		$idnumber = explode("-", $dbinput[0]);
 		// Looking for user id from id number
 		$sql = "
 		SELECT id
 		FROM {user}
-		WHERE idnumber = :id";
-		$userid = $DB->get_record_sql($sql, array('id'=>(int)$dbinput[0]));
-
+		WHERE idnumber = :idnumber";
+		$userid = $DB->get_record_sql($sql, array('idnumber'=>(int)$idnumber[0]));
+		
 		// date transformation to unix timestamp
 		$date = explode("-", $dbinput[1]);
 		$date = $date[2]."-".$date[1]."-".$date[0];
@@ -133,7 +142,6 @@ if ($mform->is_cancelled()) {
 	$label = 'Back';
 	echo $OUTPUT->single_button($url, $label, 'post');
 	echo $OUTPUT->footer();
-	die();
 }
 
 echo $OUTPUT->heading(get_string('testform', 'block_progress'));
