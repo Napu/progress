@@ -217,4 +217,5 @@ $string['adddate'] = 'Subir fechas';
 $string['testform'] = 'Subir fecha de evaluaciones';
 $string['onlycsv'] = 'Solo archivos CSV';
 $string['uploadsucces'] = 'Carga exitosa';
-$string['back'] = 'Atrás';
+$string['back'] = 'Volver';
+$string['uploaderror'] = ' Error al subir el archivo: este contiene ruts invalidos';

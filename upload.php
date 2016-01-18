@@ -119,23 +119,30 @@ if ($mform->is_cancelled()) {
 		FROM {user}
 		WHERE idnumber = :idnumber";
 		$userid = $DB->get_record_sql($sql, array('idnumber'=>(int)$idnumber[0]));
-		
+		//var_dump($userid);die();
 		// date transformation to unix timestamp
 		$date = explode("-", $dbinput[1]);
 		$date = $date[2]."-".$date[1]."-".$date[0];
 		$fecha = new DateTime($date);
-
-		//Filling in object
-		$dataobject-> userid = $userid->id;
-		$dataobject-> test_time = $fecha->getTimestamp();
-		$dataobject-> room = $dbinput[2];
-		$dataobject-> test_name = $dbinput[3];
-		$dataobject-> modulo = $dbinput[4];
-		$dataobject-> courseid = $courseid;
-		$counter++;
-		
-		// data base completition
-		$DB->insert_record('block_progress', $dataobject);
+		if ($userid = false) {
+			// Filling in object
+			$dataobject->userid = $userid->id;
+			$dataobject->test_time = $fecha->getTimestamp ();
+			$dataobject->room = $dbinput [2];
+			$dataobject->test_name = $dbinput [3];
+			$dataobject->modulo = $dbinput [4];
+			$dataobject->courseid = $courseid;
+			$counter ++;
+			// data base completition
+			$DB->insert_record ( 'block_progress', $dataobject );
+		}else{
+			$url_error = new moodle_url('/blocks/progress/upload.php', array('courseid'=>$courseid, 'progressbarid'=>$progressbarid, 'action'=>$action));
+			echo $OUTPUT->heading(get_string('uploaderror', 'block_progress'));
+			$label = 'Back';
+			echo $OUTPUT->single_button($url_error, $label, 'post');
+			echo $OUTPUT->footer();
+			die();
+		}
 	}
 	
 	echo $OUTPUT->heading(get_string('uploadsucces', 'block_progress'));

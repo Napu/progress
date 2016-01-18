@@ -218,3 +218,4 @@ $string['testform'] = 'Evaluation date upload';
 $string['onlycsv'] = 'Only CSV format';
 $string['uploadsucces'] = 'Succesfull upload';
 $string['back'] = 'Back';
+$string['uploaderror'] = ' Unseccesfull file upload: the file contain invalid id numbers';
