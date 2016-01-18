@@ -273,7 +273,7 @@ class block_progress extends block_base {
                 $overviewlabel = get_string('overview', 'block_progress');
                 $overviewoptions = array('class' => 'overviewButton');
                 $testurl = new moodle_url('/blocks/progress/upload.php', $parameters);
-                $testlabel = get_string('adddate', 'block_progress');//get_string!
+                $testlabel = get_string('adddate', 'block_progress');
             	$testoptions = array('class' => 'testButton');
             	if (has_capability('block/progress:adddate', $this->context)){
             	$this->content->text .= $OUTPUT->single_button($testurl, $testlabel, 'post', $testoptions);

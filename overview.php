@@ -25,6 +25,7 @@
 require_once(dirname(__FILE__) . '/../../config.php');
 require_once($CFG->dirroot.'/blocks/progress/lib.php');
 require_once($CFG->libdir.'/tablelib.php');
+require_once ($CFG->dirroot . '/lib/excellib.class.php');
 define('USER_SMALL_CLASS', 20);   // Below this is considered small.
 define('USER_LARGE_CLASS', 200);  // Above this is considered large.
 define('DEFAULT_PAGE_SIZE', 20);
@@ -34,6 +35,7 @@ $id       = required_param('progressbarid', PARAM_INT);
 $courseid = required_param('courseid', PARAM_INT);
 $page     = optional_param('page', 0, PARAM_INT); // Which page to show.
 $perpage  = optional_param('perpage', DEFAULT_PAGE_SIZE, PARAM_INT); // How many per page.
+$excel = optional_param('excel', 0, PARAM_INT); 
 // Determine course and context.
 $course = $DB->get_record('course', array('id' => $courseid), '*', MUST_EXIST);
 $context = block_progress_get_course_context($courseid);
@@ -41,6 +43,13 @@ $context = block_progress_get_course_context($courseid);
 $progressblock = $DB->get_record('block_instances', array('id' => $id), '*', MUST_EXIST);
 $progressconfig = unserialize(base64_decode($progressblock->configdata));
 $progressblockcontext = block_progress_get_block_context($id);
+
+
+
+
+
+
+
 // Set up page parameters.
 $PAGE->set_course($course);
 $PAGE->requires->css('/blocks/progress/styles.css');
@@ -59,13 +68,13 @@ $PAGE->set_title($title);
 $PAGE->set_heading($title);
 $PAGE->navbar->add($title);
 $PAGE->set_pagelayout('standard');
+
 // Check user is logged in and capable of grading.
 require_login($course, false);
 require_capability('block/progress:overview', $progressblockcontext);
-// Start page output.
-echo $OUTPUT->header();
-echo $OUTPUT->heading($title, 2);
-echo $OUTPUT->container_start('block_progress');
+
+
+
 // Get the modules to check progress on.
 $modules = block_progress_modules_in_use($course->id);
 if (empty($modules)) {
@@ -104,17 +113,13 @@ if ($studentrole) {
 }
 $roleselected = optional_param('role', $studentroleid, PARAM_INT);
 $rolewhere = $roleselected != 0 ? "AND a.roleid = $roleselected" : '';
-// Output group selector if there are groups in the course.
-echo $OUTPUT->container_start('progressoverviewmenus');
+
 $groupuserid = 0;
 if (!has_capability('moodle/site:accessallgroups', $context)) {
-    $groupuserid = $USER->id;
+	$groupuserid = $USER->id;
 }
 $groups = groups_get_all_groups($course->id);
-if (!empty($groups)) {
-    $course->groupmode = 2;
-    groups_print_course_menu($course, $PAGE->url);
-}
+
 // Output the roles menu.
 $sql = "SELECT DISTINCT r.id, r.name, r.shortname
           FROM {role} r, {role_assignments} a
@@ -124,11 +129,10 @@ $params = array('contextid' => $context->id);
 $roles = role_fix_names($DB->get_records_sql($sql, $params), $context);
 $rolestodisplay = array(0 => get_string('allparticipants'));
 foreach ($roles as $role) {
-    $rolestodisplay[$role->id] = $role->localname;
+	$rolestodisplay[$role->id] = $role->localname;
 }
-echo '&nbsp;'.get_string('role');
-echo $OUTPUT->single_select($PAGE->url, 'role', $rolestodisplay, $roleselected);
-echo $OUTPUT->container_end();
+
+
 // Apply group restrictions.
 $params = array();
 $groupjoin = '';
@@ -157,6 +161,27 @@ $paged = $numberofusers > $perpage;
 if (!$paged) {
     $page = 0;
 }
+if($excel==1){
+block_progress_download_excel($course->id,$course->fullname, $users);
+}
+
+// Start page output.
+echo $OUTPUT->header();
+echo $OUTPUT->heading($title, 2);
+echo $OUTPUT->container_start('block_progress');
+
+// Output group selector if there are groups in the course.
+echo $OUTPUT->container_start('progressoverviewmenus');
+if (!empty($groups)) {
+	$course->groupmode = 2;
+	groups_print_course_menu($course, $PAGE->url);
+}
+
+
+echo '&nbsp;'.get_string('role');
+echo $OUTPUT->single_select($PAGE->url, 'role', $rolestodisplay, $roleselected);
+echo $OUTPUT->container_end();
+
 // Form for messaging selected participants.
 $formattributes = array('action' => $CFG->wwwroot.'/user/action_redir.php', 'method' => 'post', 'id' => 'participantsform');
 echo html_writer::start_tag('form', $formattributes);
@@ -296,6 +321,11 @@ $jsmodule = array('name' => 'block_progress', 'fullpath' => '/blocks/progress/mo
 $arguments = array(array($progressblock->id), $userids);
 $PAGE->requires->js_init_call('M.block_progress.init', $arguments, false, $jsmodule);
 echo $OUTPUT->container_end();
+//Button that downloads the excel file with the selected users report
+$excelparameters=array('progressbarid' => $id, 'courseid'=>$courseid, 'page'=>$page, 'perpage'=>$perpage, 'excel'=>1);
+$excelurl = new moodle_url('/blocks/progress/overview.php', $excelparameters);
+echo $OUTPUT->single_button($excelurl, get_string('exceldownload', 'block_progress'), 'post');
+
 echo $OUTPUT->footer();
 /**
  * Compares two table row elements for ordering.

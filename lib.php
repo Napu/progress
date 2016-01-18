@@ -1470,7 +1470,7 @@ function block_progress_download_excel($courseid,$coursename, $users){
 	$workbook->send ( $downloadfilename );
 	// Adding the worksheet
 	$myxls = $workbook->add_worksheet ( $coursename );
-	
+
 	//sql to find the quizzes from a certain user
 	$sql_quiz="
 			SELECT q.id AS quizid, q.name, qg.grade
@@ -1558,7 +1558,6 @@ function block_progress_download_excel($courseid,$coursename, $users){
 			$myxls->write_number($row, $col, $input["grade"]);
 			$col++;
 		}
-		echo"<br>";
 		$row++;
 		
 	}
